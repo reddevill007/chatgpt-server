@@ -18,6 +18,10 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 app.post("/", async (req, res) => {
   const { message, currentModel } = req.body;
 
